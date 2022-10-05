@@ -38,14 +38,16 @@
     "docs": "./node_modules/.bin/compodoc -d ./docs/ -p ./tsconfig.json --theme vagrant",
     "serve-docs": "./node_modules/.bin/compodoc -s -d ./docs",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@angular/animations": "^5.0.3",
     "@angular/common": "5.0.3",
     "@angular/compiler": "5.0.3",
-    "@angular/compiler-cli": "5.0.3",
-    "@angular/core": "5.0.3",
+    "@angular/compiler-cli": "9.0.0",
+    "@angular/core": "11.0.5",
     "@angular/forms": "5.0.3",
     "@angular/http": "5.0.3",
     "@angular/platform-browser": "5.0.3",
@@ -59,7 +61,8 @@
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
     "web-animations-js": "^2.3.1",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.18",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular/cli": "^1.5.4",
@@ -99,5 +102,6 @@
     "mac": {
       "category": "productivity"
     }
-  }
+  },
+  "snyk": true
 }
